@@ -1,0 +1,10 @@
+production:
+  app_id: 171881339563897
+  secret: b123fc913b079b804965e6223a49f3d2
+  api_key: 171881339563897
+
+development:
+  app_id: 171881339563897
+  secret: b123fc913b079b804965e6223a49f3d2
+  api_key: 171881339563897
+  oauth2: true

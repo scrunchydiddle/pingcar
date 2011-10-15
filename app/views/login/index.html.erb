@@ -1,0 +1,17 @@
+<html>
+  <head> </head>
+  <body> 
+    <%= @var %>
+<%= fb_connect_async_js %>
+<% if current_facebook_user %>
+  <%= fb_profile_pic(current_facebook_user) %>
+
+  Welcome <%= fb_name(current_facebook_user, :useyou => false) %>
+  <%= fb_logout_link("Logout of fb", request.url) %>
+<% else %>
+  <%= fb_login_and_redirect('http://localhost:3000/login', :scope => 'user_about_me,email,user_birthday') %>
+<% end %>
+  </body>
+
+  
+</html>

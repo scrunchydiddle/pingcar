@@ -7,6 +7,8 @@ gem 'rails', '3.1.1'
 
 gem 'sqlite3'
 gem 'therubyracer'
+gem 'mogli'
+gem 'ruby-hmac'
 
 
 # Gems used only for assets and not required
