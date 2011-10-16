@@ -1,5 +1,5 @@
+<%= fb_connect_async_js %>
 <script>
-
   $(function(){
     $('#tabs').tabs();
     $('#search').button();
@@ -7,9 +7,16 @@
     
   });
 </script>
-
 <%= image_tag "pc_logo.png", :alt => 'logo' %>
-<form>
+<div id="welcomeMsg">
+<% if current_facebook_user %>
+Welcome <%= fb_name(current_facebook_user, :useyou => false) %> &nbsp
+<%= fb_logout_link("Logout", request.url) %>
+<% else %>
+<%= fb_login_and_redirect('http://localhost:3000/welcome', :text=>'Login with Facebook',:size=> 'large', :scope => 'email') %>
+<% end %>
+</div>
+<form id="searchForm">
   <div class="padding3">
     <div class='label'>From:</div>
     <input id="from" type="text" class="bigtextfield">
@@ -21,4 +28,5 @@
     <div class="tooltip">Choose your destination point</div>
     <input type="submit" id="search" value="Search">
   </div>
+
 </form>

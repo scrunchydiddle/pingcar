@@ -18,7 +18,15 @@ body {
 {
   padding:3px;
 }
+#searchForm
+{
+  padding:50px;
 
+}
+#welcomeMsg 
+{
+  float:right;
+}
 /* tooltip styling. by default the element to be styled is .tooltip  */
 .tooltip {
   display:none;
