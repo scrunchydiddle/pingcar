@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, Helvetica, Tahoma, sans-serif;
+}
+.bigtextfield 
+{
+  font-size:23px;
+  height:30px;
+  width:20em;
+}
+.label
+{
+  font-size:30px;
+  width:3em;
+  float:left;
+}
+.padding3
+{
+  padding:3px;
+}
+
+/* tooltip styling. by default the element to be styled is .tooltip  */
+.tooltip {
+  display:none;
+  background:transparent url(/assets/tools/black_arrow.png);
+  font-size:16px;
+  height:70px;
+  width:160px;
+  padding:25px;
+  color:#fff; 
+}

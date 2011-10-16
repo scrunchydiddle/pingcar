@@ -1,0 +1,24 @@
+<script>
+
+  $(function(){
+    $('#tabs').tabs();
+    $('#search').button();
+    $('#from,#to').tooltip();
+    
+  });
+</script>
+
+<%= image_tag "pc_logo.png", :alt => 'logo' %>
+<form>
+  <div class="padding3">
+    <div class='label'>From:</div>
+    <input id="from" type="text" class="bigtextfield">
+    <div class="tooltip">Choose your departure point</div>
+  </div>
+  <div class="padding3">
+    <div class='label'>To:</div>
+    <input id="to" type="text" class="bigtextfield" >
+    <div class="tooltip">Choose your destination point</div>
+    <input type="submit" id="search" value="Search">
+  </div>
+</form>
