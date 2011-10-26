@@ -14,6 +14,12 @@ Pingcar::Application.routes.draw do
   #   resources :products
 resources :login
 resources :welcome
+match "entry/:fb_id/:long/:lat/:isDriving" => "entry#new", 
+  :constraints => { :long => /[^\/]+/, :lat => /[^\/]+/ } ,
+  :as => :new_entry
+match "entry/:long/:lat" => "entry#get", 
+  :constraints => { :long => /[^\/]+/, :lat => /[^\/]+/ } ,
+  :as => :get_nearby
 
   # Sample resource route with options:
   #   resources :products do

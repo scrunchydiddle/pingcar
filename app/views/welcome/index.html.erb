@@ -8,6 +8,7 @@
   });
 </script>
 <%= image_tag "pc_logo.png", :alt => 'logo' %>
+<%= debug @entry %>
 <div id="welcomeMsg">
 <% if current_facebook_user %>
 Welcome <%= fb_name(current_facebook_user, :useyou => false) %> &nbsp
